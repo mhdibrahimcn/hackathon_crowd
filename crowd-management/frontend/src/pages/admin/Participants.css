@@ -1,0 +1,148 @@
+.participants-page {
+  padding: 24px;
+  background: #1a1a2e;
+  min-height: 100%;
+}
+
+.participants-page.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0a0b0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  color: white;
+  margin: 0;
+}
+
+.search-box input {
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  width: 250px;
+}
+
+.participants-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.participants-stats .stat {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.participants-stats .value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+.participants-stats .label {
+  font-size: 0.8rem;
+  color: #a0a0b0;
+}
+
+.participants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #a0a0b0;
+}
+
+.participant-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.participant-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.participant-avatar {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.participant-details h4 {
+  margin: 0;
+  color: white;
+}
+
+.participant-details p {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #a0a0b0;
+}
+
+.participant-status .status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+}
+
+.status-badge.checked_in {
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+}
+
+.status-badge.checked_out {
+  background: rgba(255, 255, 255, 0.1);
+  color: #a0a0b0;
+}
+
+.participant-times {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #a0a0b0;
+}
+
+.participant-actions button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}

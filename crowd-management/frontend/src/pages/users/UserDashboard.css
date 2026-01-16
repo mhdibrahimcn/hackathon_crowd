@@ -1,0 +1,297 @@
+.user-dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a2e;
+}
+
+.user-dashboard.loading {
+  align-items: center;
+  justify-content: center;
+  color: #a0a0b0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.event-info h1 {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+}
+
+.event-info span {
+  font-size: 0.85rem;
+  color: #a0a0b0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.location-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.locate-btn {
+  background: linear-gradient(135deg, #00ff88, #00d4ff);
+  border: none;
+  color: #1a1a2e;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.side-panel {
+  width: 260px;
+  background: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.side-panel.collapsed {
+  width: 50px;
+}
+
+.collapse-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.panel-section {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panel-section h3 {
+  font-size: 0.85rem;
+  color: #00d4ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card .stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.stat-card .stat-label {
+  font-size: 0.7rem;
+  color: #a0a0b0;
+  text-transform: uppercase;
+}
+
+.heatmap-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.heatmap-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: #00d4ff;
+}
+
+.panel-section.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.sos-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  border: none;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sos-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
+}
+
+.chat-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.map-area {
+  flex: 1;
+  position: relative;
+}
+
+.user-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* SOS Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.sos-modal {
+  background: #1a1a2e;
+  border: 2px solid #ff6b6b;
+  border-radius: 20px;
+  padding: 32px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.sos-modal h2 {
+  color: #ff6b6b;
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+.sos-modal > p {
+  color: #a0a0b0;
+  margin: 0 0 24px;
+}
+
+.sos-modal .form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.sos-modal label {
+  display: block;
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.sos-modal textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.sos-location {
+  background: rgba(0, 212, 255, 0.1);
+  color: #00d4ff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}
+
+.sos-modal .modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-cancel {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-sos {
+  flex: 2;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-sos:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

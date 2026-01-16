@@ -1,0 +1,250 @@
+.user-dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a2e;
+}
+
+.user-dashboard.loading {
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.event-info h1 {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+}
+
+.user-greeting {
+  font-size: 0.85rem;
+  color: #a0a0b0;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.location-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.locate-btn {
+  background: linear-gradient(135deg, #00ff88, #00d4ff);
+  border: none;
+  color: #1a1a2e;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.locate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Side Panel */
+.side-panel {
+  width: 260px;
+  background: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.side-panel.collapsed {
+  width: 50px;
+}
+
+.collapse-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.panel-section {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panel-section h3 {
+  font-size: 0.85rem;
+  color: #00d4ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+}
+
+.event-details {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.event-details p {
+  margin: 0 0 6px;
+  color: #a0a0b0;
+  font-size: 0.85rem;
+}
+
+.event-details p strong {
+  color: white;
+  font-size: 1rem;
+}
+
+.event-date {
+  color: #00d4ff !important;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card .stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.stat-card .stat-label {
+  font-size: 0.7rem;
+  color: #a0a0b0;
+  text-transform: uppercase;
+}
+
+.stat-card.nearby .stat-value {
+  color: #00ff88;
+}
+
+.stat-card.online .stat-value {
+  color: #00d4ff;
+}
+
+/* Heatmap Toggle */
+.heatmap-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.heatmap-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: #00d4ff;
+}
+
+/* Actions */
+.panel-section.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.sos-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  border: none;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sos-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
+}
+
+.chat-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.chat-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Map Area */
+.map-area {
+  flex: 1;
+  position: relative;
+}
+
+.user-map {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,147 @@
+.user-join-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.user-join-page.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  color: #a0a0b0;
+  font-size: 1.2rem;
+}
+
+.join-container {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.join-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.join-header h1 {
+  font-size: 1.8rem;
+  color: white;
+  margin: 0 0 8px;
+}
+
+.join-header p {
+  color: #a0a0b0;
+  margin: 0;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #a0a0b0;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00d4ff;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.terms-notice {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.terms-notice p {
+  font-size: 0.85rem;
+  color: #a0a0b0;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.agree-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.agree-checkbox input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #00d4ff;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+  border: none;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 212, 255, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.back-link a {
+  color: #a0a0b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link a:hover {
+  color: #00d4ff;
+}
